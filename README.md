@@ -47,7 +47,8 @@ sudo su
 setoolkit
 This command starts the Social-Engineer Toolkit interface.
 
-Step 2: Choose Attack Options
+
+### Step 2: Choose Attack Options
 From the SEToolkit menu, the following selections were made:
 
 mathematica
@@ -56,7 +57,8 @@ Copy code
 2 → Website Attack Vectors
 3 → Credential Harvester Attack Method
 2 → Site Cloner
-Step 3: Configure Site Cloning
+
+### Step 3: Configure Site Cloning
 Enter attacker IP address:
 
 Copy code
@@ -68,7 +70,7 @@ Copy code
 http://dvwa.vm
 The target site is cloned and hosted locally on the attacker machine.
 
-Step 4: Create a Redirect HTML File
+### Step 4: Create a Redirect HTML File
 A basic HTML redirect page was created to forward users to the cloned website.
 
 HTML Content:
@@ -90,7 +92,7 @@ Save as ladies.html on the Desktop
 
 Open the file in a web browser
 
-Step 5: Test Credential Harvesting
+### Step 5: Test Credential Harvesting
 Test credentials were entered to verify functionality:
 
 Email: ladies@gmail.com
@@ -99,7 +101,7 @@ Password: 1234
 
 These credentials were purely for demonstration and testing.
 
-Step 6: Stop the Attack
+### Step 6: Stop the Attack
 Terminate SEToolkit using:
 
 bash
@@ -112,7 +114,7 @@ Copy code
 99
 99
 99
-Step 7: Review Captured Data
+### Step 7: Review Captured Data
 bash
 Copy code
 cat /root/.set/reports/"2025-12-14 13:34:09.326665.xml"
@@ -132,7 +134,8 @@ Verifying URLs is critical
 
 User awareness is an effective security control
 
- Lab 2: SMB Enumeration with Enum4Linux
+
+### Lab 2: SMB Enumeration with Enum4Linux
 Objective
 To detect SMB misconfigurations by enumerating users, shares, and access permissions on a target system.
 
@@ -148,13 +151,13 @@ Attacker Machine: Kali Linux
 
 Target IP Address: 172.17.0.2
 
-Step 1: Network Discovery
+### Step 1: Network Discovery
 bash
 Copy code
 nmap -sN 172.17.0.0/24
 Used to identify active hosts on the local network.
 
-Step 2: SMB Enumeration with Enum4Linux
+### Step 2: SMB Enumeration with Enum4Linux
 Enumerate Users
 
 bash
@@ -185,7 +188,8 @@ Complete Enumeration
 bash
 Copy code
 enum4linux -a 172.17.0.2
-Step 3: Access SMB Shares with smbclient
+
+### Step 3: Access SMB Shares with smbclient
 List Available Shares
 
 bash
@@ -201,7 +205,8 @@ Access Temporary Share
 bash
 Copy code
 smbclient //172.17.0.2/tmp
-Step 4: File Upload Test (Simulation)
+
+### Step 4: File Upload Test (Simulation)
 A test file was created to demonstrate risks associated with writable SMB shares.
 
 bash
@@ -242,5 +247,6 @@ Secure system and network configurations
 Regular vulnerability assessments
 
 Ethical and responsible use of security tools
+
 
 All activities were performed strictly within a controlled lab environment for educational purposes. The skills and knowledge gained will be applied toward defensive security practices and ethical penetration testing.
